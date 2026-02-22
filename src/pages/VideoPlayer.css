@@ -1,0 +1,276 @@
+.video-player-root.minimized {
+  top: calc(100vh - 110px);
+  height: 110px;
+  background: #1a1a1a;
+  border-top: 2px solid #ff0000;
+}
+
+.mini-player-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 10px 4px 10px;
+  position: relative;
+  z-index: 50;
+}
+
+.mini-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.mini-title {
+  font-size: 12px;
+  font-weight: bold;
+  max-width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mini-time {
+  font-size: 11px;
+  font-family: monospace;
+}
+
+.mini-controls-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.mini-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+
+.mini-btn:active {
+  transform: scale(0.9);
+}
+
+.play-btn {
+  font-size: 20px;
+  color: #fff;
+}
+
+.close-btn {
+  color: #fba5a5;
+  font-size: 16px;
+}
+
+
+.mini-seek-bar {
+  margin-top: auto;
+  width: 100%;
+  height: 4px;
+}
+
+.video-player-root {
+  position: fixed;
+  left: 0;
+  z-index: 2000;
+  background: #150303;
+  color: white;
+  overflow: hidden;
+  will-change: transform, top, height;
+}
+
+.video-player-root.maximized {
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-player-root.minimized {
+  top: calc(100vh - 100px);
+  width: 100vw;
+  height: 100px;
+  background: rgb(34, 34, 34);
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #333;
+}
+
+.player-main-area {
+  display: flex;
+  width: 100%;
+}
+
+.maximized .player-main-area {
+  flex-direction: column;
+}
+
+.minimized .player-main-area {
+  flex-direction: row;
+  height: calc(100% - 4px);
+}
+
+.video-wrapper {
+  background: black;
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+
+.maximized .video-wrapper {
+  width: 100%;
+}
+
+.minimized .video-wrapper {
+  width: 140px;
+  height: 100%;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+
+.mini-click-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.mini-player-content {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  position: relative;
+  z-index: 10;
+}
+
+.mini-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding-right: 8px;
+}
+
+.mini-title {
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mini-time {
+  font-size: 11px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+
+.mini-seek-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0;
+  z-index: 20;
+}
+
+
+.mini-seek-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #20ddff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+.mini-seek-bar::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #1a1a1a;
+}
+
+
+.full-details-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 15px 20px;
+}
+
+.drag-handle-area {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  cursor: grab;
+}
+
+
+.drag-bar {
+  width: 40px;
+  height: 4px;
+  background: #212121;
+  border-radius: 2px;
+}
+
+.controls-overlay {
+  background: #2f2e2e;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.seek-bar {
+  width: 100%;
+  accent-color: #20ddff;
+}
+
+.main-btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.play-pause-big {
+  background: white !important;
+  color: black !important;
+  font-weight: bold;
+  padding: 10px 20px !important;
+  border-radius: 20px !important;
+  border-width: 0cap;
+}
+
+.related-item {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.related-item img {
+  width: 120px;
+  border-radius: 6px;
+}
